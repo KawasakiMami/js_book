@@ -13,8 +13,8 @@
     <h1 class="frame__title">JavaScriptの勉強</h1>
     <div class="frame__inner">
         <script>
-                let day = prompt('何日ぶんの秒数を知りたい？！')
-                document.write(60*60*24*day)
+                const now_date = new Date();
+                document.write(now_date.getSeconds());
 
         </script>
     </div>
