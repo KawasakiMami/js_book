@@ -12,14 +12,10 @@
 <div class="frame">
     <h1 class="frame__title">JavaScriptの勉強</h1>
     <div class="frame__inner">
+        <div id="time"></div>
         <script>
-                const now_date = new Date();
-
-                let hour = now_date.getHours();
-                let min = now_date.getMinutes();
-                let sec = now_date.getSeconds();
-                document.write(`${hour}時間 ${min}分 ${sec}秒`);
-
+            let display = document.getElementById('time');
+            display.innerHTML = 'mami'
         </script>
     </div>
 </div>
