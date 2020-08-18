@@ -8,14 +8,20 @@
     <link rel="stylesheet" href="./assets/style.css">
 </head>
 
-<script>
-    document.title = '(1)' + document.title
-</script>
-
 <body>
 <div class="frame">
     <h1 class="frame__title">JavaScriptの勉強</h1>
     <div class="frame__inner">
+        <script>
+            let answer = prompt('1~10の数字を入れてください');
+            if (1 <= answer && answer <= 10 ){
+                document.write('正しい入力')
+            } else {
+                document.write('変な数字を入れましたね？？？？')
+        }
+
+
+        </script>
     </div>
 </div>
 </body>
