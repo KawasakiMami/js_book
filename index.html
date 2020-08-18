@@ -14,7 +14,11 @@
     <div class="frame__inner">
         <script>
                 const now_date = new Date();
-                document.write(now_date.getSeconds());
+
+                let hour = now_date.getHours();
+                let min = now_date.getMinutes();
+                let sec = now_date.getSeconds();
+                document.write(`${hour}時間 ${min}分 ${sec}秒`);
 
         </script>
     </div>
