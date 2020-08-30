@@ -13,42 +13,23 @@
     <h1 class="frame__title">JavaScriptの勉強</h1>
     <div class="frame__inner">
         <script>
-        class Item {
-            constructor(price) {
-                this._tax = 10;
-                if (isFinite(price)){
-                    this.price = price;
-                } else {
-                    this.price = 0;
-                }
+        const locations = [
+            {
+                "name": "国会議事堂",
+                "address": "東京都千代田区"
+            },
+            {
+                "name": "札幌時計台",
+                "address": "札幌市中央区"
+            },
+            {
+                "name": "首里城",
+                "address": "沖縄県那覇市"
             }
+        ];
 
-            getTaxPrice(){
-                return Math.round(this.price * (this._tax/100));
-            }
-
-            get tax() {
-                return this._tax + '%'
-            }
-
-            set tax(tax) {
-                if (isFinite(tax)){
-                    this._tax = tax;
-                } else {
-                    this._tax = 0
-                }
-            }
-        }
-
-        const price = parseInt(prompt('商品の金額は？'));
-        const item = new Item(price);
-
-        let taxPrice = item.getTaxPrice();
-
-        if(taxPrice) {
-            document.write(`${price}円の消費税は${taxPrice}円です`);
-        } else {
-            document.write('数字を入力してください');
+        for (let i=0; i<locations.length; i++) {
+            document.write(locations[i].name + '/' + locations[i].address + "<br>");
         }
 
         </script>
