@@ -13,16 +13,16 @@
     <h1 class="frame__title">JavaScriptの勉強</h1>
     <div class="frame__inner">
         <script>
-        const price = parseInt(prompt('商品の金額を入力'));
-        const tax = 10;
+        const q1 = Math.floor(Math.random() * 10);
+        const q2 = Math.floor(Math.random() * 10);
 
-        if (Number.isFinite(price)) {
-            let tax_price = Math.round(price * (tax/100));
-            document.write(`${price}円の消費税は${tax_price}円です。`)
+        let answer = parseInt(prompt(`${q1}+${q2}=?`));
+
+        if( q1+q2 === answer ){
+            document.write('正解！');
         } else {
-            alert('数字を入力してください')
+            document.write('ハズレ！w');
         }
-
         </script>
     </div>
 </div>
