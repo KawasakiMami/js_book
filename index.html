@@ -13,8 +13,14 @@
     <h1 class="frame__title">JavaScriptの勉強</h1>
     <div class="frame__inner">
         <script>
-        for( let day=1; day<=365; day++) {
-            document.write(day + '<br>');
+        const week = ['日', '月', '火', '水', '木', '金', '土'];
+        let today = new Date();
+
+        let week_jp = week[today.getDay()];
+        document.write(`今日は、${week_jp}曜日です`);
+
+        for (let i=0; i<week.length; i++) {
+            document.write(week[i] + '<br>');
         }
         </script>
     </div>
