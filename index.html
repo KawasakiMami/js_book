@@ -13,16 +13,13 @@
     <h1 class="frame__title">JavaScriptの勉強</h1>
     <div class="frame__inner">
         <script>
-        const book_text = '吾輩は猫である。名前はまだ無い。どこで生まれたかわかんない。薄暗くジメジメしてしたところでにゃーにゃーと泣いていたことだけは覚えている';
+        const price = 100
+        const cnt = parseInt(prompt(`こちらの商品(${price}円)をいくつ購入しますか？`));
 
-        let keyword = prompt('見つけたい文字は？');
-
-        let position = book_text.indexOf(keyword);
-        if (position >= 0) {
-            document.write(`<p>${book_text}</p>`);
-            document.write(`<p>${keyword}は${position+1}文字目に見つかりました</p>`);
+        if (Number.isFinite(cnt)) {
+            document.write(`${cnt * price}円です`);
         } else {
-            document.write('見つからなかったよ')
+            document.write('半角数字で入力してください')
         }
         </script>
     </div>
