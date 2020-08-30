@@ -13,15 +13,12 @@
     <h1 class="frame__title">JavaScriptの勉強</h1>
     <div class="frame__inner">
         <script>
-        const q1 = Math.floor(Math.random() * 10);
-        const q2 = Math.floor(Math.random() * 10);
+        let num = parseInt(prompt('数字を入力してください'));
 
-        let answer = parseInt(prompt(`${q1}+${q2}=?`));
-
-        if( q1+q2 === answer ){
-            document.write('正解！');
+        if (num %2 === 0) {
+            document.write('偶数です');
         } else {
-            document.write('ハズレ！w');
+            document.write('奇数です');
         }
         </script>
     </div>
