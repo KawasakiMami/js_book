@@ -13,14 +13,16 @@
     <h1 class="frame__title">JavaScriptの勉強</h1>
     <div class="frame__inner">
         <script>
-        const price = 100
-        const cnt = parseInt(prompt(`こちらの商品(${price}円)をいくつ購入しますか？`));
+        const price = parseInt(prompt('商品の金額を入力'));
+        const tax = 10;
 
-        if (Number.isFinite(cnt)) {
-            document.write(`${cnt * price}円です`);
+        if (Number.isFinite(price)) {
+            let tax_price = Math.round(price * (tax/100));
+            document.write(`${price}円の消費税は${tax_price}円です。`)
         } else {
-            document.write('半角数字で入力してください')
+            alert('数字を入力してください')
         }
+
         </script>
     </div>
 </div>
