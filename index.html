@@ -13,12 +13,44 @@
     <h1 class="frame__title">JavaScriptの勉強</h1>
     <div class="frame__inner">
         <script>
-        const getTaxPrice = (price, tax=10) => {
-            return Math.round(price * (tax/100));
+        class Item {
+            constructor(price) {
+                this._tax = 10;
+                if (isFinite(price)){
+                    this.price = price;
+                } else {
+                    this.price = 0;
+                }
+            }
+
+            getTaxPrice(){
+                return Math.round(this.price * (this._tax/100));
+            }
+
+            get tax() {
+                return this._tax + '%'
+            }
+
+            set tax(tax) {
+                if (isFinite(tax)){
+                    this._tax = tax;
+                } else {
+                    this._tax = 0
+                }
+            }
         }
 
-        let taxPrice = getTaxPrice(1980, 8);
-        document.write(taxPrice);
+        const price = parseInt(prompt('商品の金額は？'));
+        const item = new Item(price);
+
+        let taxPrice = item.getTaxPrice();
+
+        if(taxPrice) {
+            document.write(`${price}円の消費税は${taxPrice}円です`);
+        } else {
+            document.write('数字を入力してください');
+        }
+
         </script>
     </div>
 </div>
