@@ -13,14 +13,7 @@
     <h1 class="frame__title">JavaScriptの勉強</h1>
     <div class="frame__inner">
         <div id="timer"></div>
-        <script>
-            let timer = () => {
-                let now = new Date();
-                document.getElementById('timer').innerHTML = `${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}`;
-            }
-
-            let timerID = setInterval(timer, 500)
-        </script>
+        <script src="js/timer.js"></script>
     </div>
 </div>
 </body>
