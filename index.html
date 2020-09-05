@@ -12,23 +12,17 @@
 <div class="frame">
     <h1 class="frame__title">JavaScriptの勉強</h1>
     <div class="frame__inner">
-        <p>
-            メールアドレス: <input type="email" name="email" id="">
-            <span style="color: #f33"></span>
-        </p>
-        <script>
-            const email = document.querySelector('input[name="email"]');
+        <div><label>
+            <input type="checkbox" name="agree" id="agree">同意する
+        </label></div>
+        <div><button id="submit" disabled>送信する</button></div>
 
-            // フォームからフォーカスが外れた時に、入力がからの場合はエラーを表示
-            email.addEventListener('blur', () => {
-                if(email.value === '') {
-                    email.style.backgroundColor = '#fcc';
-                    email.nextElementSibling.innerHTML = 'メールアドレスをご記入ください';
-                } else {
-                    email.style.backgroundColor = '#fff';
-                    email.nextElementSibling.innerHTML = '';
-                }
+        <script>
+            const agree = document.getElementById('agree');
+            agree.addEventListener('change', ()=>{
+                document.getElementById('submit').disabled = !agree.checked;
             })
+
         </script>
     </div>
 </div>
