@@ -12,8 +12,13 @@
 <div class="frame">
     <h1 class="frame__title">JavaScriptの勉強</h1>
     <div class="frame__inner">
-        <div id="timer"></div>
-        <script src="js/timer.js"></script>
+        <p id="answer"></p>
+        <script type="module">
+            import { sum } from './js/math.js';
+
+            let answer = sum(10, 2);
+            document.getElementById('answer').innerHTML = answer;
+        </script>
     </div>
 </div>
 </body>
